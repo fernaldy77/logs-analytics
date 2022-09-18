@@ -25,7 +25,7 @@ These are prerequisites that must be done before start the project:
 ## Usage
 Here are steps to use run the project:
 1. Create dataflow on Apache Nifi at: <GCP VM IP>:2080. Create processors that process data from GetFile, several SplitText,and PublishKafka. Below is example of dataflow:
-![Nifi dataflow diagram](nifi-diagram.png)
+![Nifi dataflow diagram](nifi-diagram.PNG)
 2. Create Cassandra keyspace and table: <code> CREATE KEYSPACE IF NOT EXISTS log_analytics WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
     CREATE TABLE IF NOT EXISTS log_analytics.nasa_logs (host text , time text , method text , url text , response text , bytes text, extension text, time_added text,PRIMARY KEY (host)) </code>
 3. Create folder on HDFS: <code>  hdfs dfs -mkdir -p /output/nasa_logs/ </code>
