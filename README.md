@@ -31,3 +31,4 @@ Here are steps to use run the project:
 3. Create folder on HDFS: <code>  hdfs dfs -mkdir -p /output/nasa_logs/ </code>
 4. Create table on Postgres on database logs_analytics: <code> CREATE TABLE IF NOT EXISTS nasa_log (host varchar , time varchar , method varchar , url varchar , response varchare , bytes varchar, extension varchar, time_added varchar); </code>
 5. Run dataflow on Nifi
+6. Run Spark code to read stream data from Kafka and store to database
