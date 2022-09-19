@@ -32,7 +32,7 @@ def process_row(df, epoch_id):
     df.write \
         .format("org.apache.spark.sql.cassandra") \
         .mode('append') \
-        .options(table="nasalog", keyspace="loganalysis") \
+        .options(table=table_name, keyspace=key_space) \
         .save()  # hot path
     df.write.csv("hdfs://namenode:8020/output/nasa_logs/", mode="append")  # cold path
 
