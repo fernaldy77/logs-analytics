@@ -18,7 +18,7 @@ The access logs will be then stored on top of Cassandra, HDFS and Postgresql.
 
 These are prerequisites that must be done before start the project:
 
-1. Setup a GCP VM
+1. Setup a GCP Compute Engine instance
 2. Install Nifi, Kafka, Spark, Cassandra, HDFS and Postgresql using docker compose. You can find find docker-compose.yml on the repository
 
 
